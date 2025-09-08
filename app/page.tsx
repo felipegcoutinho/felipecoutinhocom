@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { TextAnimate } from "../components/magicui/text-animate";
 import { Linkedin, Mail } from "lucide-react";
 import { VideoText } from "../components/magicui/video-text";
@@ -13,13 +14,21 @@ const MAIL_SUBJECT = "Contato via site";
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center gap-4 p-8 sm:p-20 text-center">
+      <Image
+        src="/avatar.png"
+        alt="Foto de perfil de Felipe Coutinho"
+        width={90}
+        height={90}
+        priority
+        className="rounded-full ring-1  shadow-sm"
+      />
       <div className="relative w-full overflow-hidden h-20 sm:h-28 md:h-36 lg:h-44 xl:h-52">
         <VideoText
           as="h1"
           src="orange_bg.mp4"
           fontWeight={800}
           fontFamily="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto"
-          fontSize={6}
+          fontSize={7}
         >
           Felipe Coutinho.
         </VideoText>

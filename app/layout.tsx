@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://example.com";
 
@@ -21,7 +22,12 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     type: "website",
     images: [
-      { url: "/opengraph-image", width: 1200, height: 630, alt: "Felipe Coutinho" },
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Felipe Coutinho",
+      },
     ],
   },
   twitter: {
@@ -31,7 +37,7 @@ export const metadata: Metadata = {
     images: ["/opengraph-image"],
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/avatar.png",
   },
   robots: {
     index: true,
@@ -51,6 +57,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${InterFont.className} antialiased`}>{children}</body>
+      <Analytics />
     </html>
   );
 }

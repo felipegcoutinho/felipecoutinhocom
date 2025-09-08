@@ -1,5 +1,7 @@
 import React, { AnchorHTMLAttributes, ReactNode } from "react";
 import { cn } from "@/lib/utils";
+import { ShimmerButton } from "../magicui/shimmer-button";
+import Link from "next/link";
 
 interface ActionButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string;
@@ -18,22 +20,19 @@ export function ActionButton({
   ...rest
 }: ActionButtonProps) {
   return (
-    <a
+    <Link
       href={href}
       target={external ? "_blank" : undefined}
       rel={external ? "noopener noreferrer" : undefined}
       aria-label={ariaLabel}
-      className={cn(
-        "inline-flex items-center gap-2 rounded-md bg-white px-5 py-3 text-base font-medium text-black",
-        "transition-colors hover:bg-white/90",
-        "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white",
-        className,
-      )}
-      {...rest}
+      passHref
     >
-      {icon}
-      {children}
-    </a>
+      <ShimmerButton>
+        <span className="flex items-center gap-2 whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-black lg:text-lg">
+          {icon}
+          {children}
+        </span>
+      </ShimmerButton>
+    </Link>
   );
 }
-

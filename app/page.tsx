@@ -1,13 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const LINKEDIN_URL =
-  process.env.NEXT_PUBLIC_LINKEDIN_URL ||
-  "https://www.linkedin.com/in/felipegcoutinho";
-const CONTACT_EMAIL =
-  process.env.NEXT_PUBLIC_CONTACT_EMAIL || "eu@felipecoutinho.com";
-const GITHUB_URL =
-  process.env.NEXT_PUBLIC_GITHUB_URL || "https://github.com/felipegcoutinho";
+const LINKEDIN_URL = "https://www.linkedin.com/in/felipegcoutinho";
+const CONTACT_EMAIL = "eu@felipecoutinho.com";
+const GITHUB_URL = "https://github.com/felipegcoutinho";
 
 const SKILLS = {
   Network: ["Wi-Fi / WLAN", "LAN & Routing", "VLANs", "Access Points", "TCP/IP", "DNS / DHCP", "Firewall", "VPN", "Cisco IOS", "Ubiquiti / UniFi", "TP-Link Omada"],

@@ -4,7 +4,7 @@ import Script from "next/script";
 import { Fira_Mono } from "next/font/google";
 import "./globals.css";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://example.com";
+const siteUrl = "https://felipecoutinho.com";
 
 const FiraMono = Fira_Mono({
   subsets: ["latin"],

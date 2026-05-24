@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://felipecoutinho.com/sitemap.xml
+Host: https://felipecoutinho.com
